@@ -80,7 +80,8 @@ public class MainTheTrueColor extends Game {
     }
 
     private void getPersonPhoto(final Person oPerson) {
-        handlerGWT.getTextureFromFacebook("https://randomuser.me/api/portraits/men/18.jpg", new OnTextureLoaded() {
+        // (FIXME: Profile images should not be hardcoded here)
+        handlerGWT.getTextureFromFacebook("https://picsum.photos/200", new OnTextureLoaded() {
             @Override
             public void onTextureLoaded(Texture texture) {
                 oPerson.setPicture(new TextureRegionDrawable(new TextureRegion(texture)));

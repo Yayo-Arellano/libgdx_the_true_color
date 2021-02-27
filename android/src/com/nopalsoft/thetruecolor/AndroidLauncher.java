@@ -31,6 +31,7 @@ public class AndroidLauncher extends AndroidApplication implements RequestHandle
     public void facebookSignOut() {
         isSigned = false;
         Gdx.app.log("Facebook", "Sign out");
+        game.removeFromArray(Person.TipoCuenta.FACEBOOK);
     }
 
     @Override
